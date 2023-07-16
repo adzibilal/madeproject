@@ -342,7 +342,7 @@ input[type="radio"] {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #EF7F19;
+  color: #ef7f19;
   text-transform: capitalize;
 }
 @media only screen and (max-width: 575px) {
@@ -451,8 +451,8 @@ a.theme-btn.style-two:hover {
 .theme-btn.style-three,
 a.theme-btn.style-three {
   padding: 8px 29px;
-  color: #EF7F19;
-  background: #FFE2C8;
+  color: #ef7f19;
+  background: #ffe2c8;
   border: 1px solid #ef80194d;
 }
 .theme-btn.style-three:hover,
@@ -5536,12 +5536,12 @@ h6,
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.66)), to(transparent));
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.66), transparent);
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.66), transparent);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.66), transparent);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.66), transparent);
 }
 @media only screen and (min-width: 1600px) {
   .page-banner {
-    margin-left: 115px;
-    margin-right: 115px;
+    /* margin-left: 115px;
+    margin-right: 115px; */
   }
 }
 .page-banner.style-two:after,
@@ -5555,7 +5555,8 @@ h6,
 }
 
 .banner-inner .page-title {
-  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 10px;
   text-transform: capitalize;
 }
 @media only screen and (max-width: 767px) {
@@ -6232,14 +6233,17 @@ h6,
   transition: 0.5s;
   border-radius: 5px;
   margin-bottom: 30px;
-  padding: 30px 50px 35px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.service-item-two .content {
+  padding: 25px;
 }
 @media only screen and (min-width: 480px) {
   .service-item-two {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -7747,6 +7751,10 @@ h6,
   -webkit-box-shadow: 10px 0 60px rgba(132, 132, 132, 0.1);
   box-shadow: 10px 0 60px rgba(132, 132, 132, 0.1);
 }
+.pricing-plan-item.style-two {
+  background-color: #013d87;
+  color: white;
+}
 @media only screen and (max-width: 375px) {
   .pricing-plan-item {
     padding-left: 25px;
@@ -7758,6 +7766,9 @@ h6,
 }
 .pricing-plan-item .title {
   margin-bottom: 35px;
+}
+.pricing-plan-item.style-two .title {
+  color: white;
 }
 .pricing-plan-item .image {
   height: 0;
@@ -7813,6 +7824,10 @@ h6,
   font-weight: 500;
   text-align: left;
   margin-bottom: 35px;
+  position: relative;
+}
+.pricing-plan-item.style-two .price, .pricing-plan-item.style-two .price-qty{
+  color: white;
 }
 @media only screen and (max-width: 375px) {
   .pricing-plan-item .price {
@@ -7822,11 +7837,28 @@ h6,
 .pricing-plan-item .price:before {
   content: "$";
   font-size: 22px;
+  color: #013d87;
+  position: absolute;
+  top: -10px;
+  left: -15px;
 }
-.pricing-plan-item .price:after {
+.pricing-plan-item.style-two .price:before {
+  content: "$";
+  font-size: 22px;
+  color: #ef7f19;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+.price-qty {
   font-size: 16px;
-  content: "/monthly";
   color: #7e7e7e;
+}
+.flex-cn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 /*******************************************************/
@@ -10382,7 +10414,6 @@ h6,
 
 .contact-info-wrap,
 .contact-info-content {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10393,12 +10424,8 @@ h6,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.contact-info-content {
-  padding: 75px 80px;
-}
 @media only screen and (min-width: 992px) {
   .contact-info-content {
     border-right: none;
@@ -10429,7 +10456,7 @@ h6,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 80px;
+  padding: 10px 10px;
 }
 @media only screen and (max-width: 575px) {
   .contact-info-item {
@@ -10442,9 +10469,6 @@ h6,
     padding-left: 25px;
     padding-right: 25px;
   }
-}
-.contact-info-item:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .contact-info-item .icon {
   -webkit-box-flex: 0;

@@ -10644,10 +10644,16 @@ h6,
   font-size: 16px;
 }
 @media only screen and (max-width: 375px) {
+ 
   .footer-area .widget_nav_menu ul li {
     width: 100%;
   }
 }
+ 
+  .page-banner{
+    margin-top: 90px;
+  }
+
 .footer-area .widget_nav_menu ul li:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -10685,4 +10691,12 @@ h6,
 }
 .footer-bottom .copyright-text a {
   color: #013d87;
+}
+
+.navbar.style-one .navbar-collapse{
+  width: 75%;
+}
+.header-btn{
+  height: 50px;
+  color: white !important;
 }
